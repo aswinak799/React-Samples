@@ -58,7 +58,6 @@ function App() {
         <ol id="players" className="highlight-player">
           <Player initialName="player1" symbol="X" isActive={derivePlayer(gameTurns)==='X'}/>
           <Player initialName="player2" symbol="O" isActive={derivePlayer(gameTurns)==='O'}/>
-
         </ol>
         {(winner || hasDraw) && <GameOver winner={winner} onRestart={handleRestart}/>}
         <Gameboard 
