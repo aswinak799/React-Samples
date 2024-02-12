@@ -14,12 +14,8 @@ const MoviePage = () => {
     if (isError) throw error;
     console.log('data', data);
     return (
-        <div >
-            {data && data.map(movie=><MovieCard title={movie.original_title} image={`${IMAGE_BASE_URL}${movie.backdrop_path}`} userLogo='https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D'  />)}
-            
-            
-
-
+        <div className='movie-page'>
+            {data && data.map(movie=><MovieCard key={movie.original_title} {...movie}  />)}
         </div>
     );
 }

@@ -1,5 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lato:wght@400;700&display=swap');
+
 body{
   margin: 0;
   padding: 0;
   background-color: #111;
+  font-family: 'Lato', sans-serif;
+}
+.movie-page{
+  --bs-gutter-x: -0.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(var(--bs-gutter-y) * -1);
+  margin-right: calc(var(--bs-gutter-x) * -.5);
+  margin-left: calc(var(--bs-gutter-x) * -.5);
 }

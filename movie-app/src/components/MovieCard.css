@@ -1,52 +1,79 @@
 .movie-card {
+    display: flex;
+    flex-direction: column;
     width: 250px;
-    border-radius: 10px;
+    border-radius: 8px;
+    background: #000;
     overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-.movie-card:hover {
-    transform: translateY(-5px);
-}
-
-.card-body {
     position: relative;
-}
-
-.movie-img {
+    /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.2s;
+    margin: 20px;
+  }
+  
+  .movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgb(161, 202, 247) 0px 20px 30px -10px;
+  }
+  
+  .movie-poster img {
     width: 100%;
     height: auto;
-    border-radius: 10px 10px 0 0;
-}
-
-.card-footer {
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .movie-info {
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .movie-info h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .movie-info .release-date {
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  
+  .movie-info .overview {
+    margin-bottom: 10px;
+  }
+  
+  .movie-info .vote-average {
+    font-weight: bold;
+  }
+  .watchButton{
     padding: 10px;
-    background-color: #fff;
-}
-
-.card-footer h5 {
-    margin: 0;
-    font-size: 18px;
-    color: #333;
-    text-align: center;
-}
-
-/* Additional styles for better presentation */
-.movie-card {
-    margin: 20px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-@media (max-width: 768px) {
-    .movie-card {
-        width: calc(50% - 40px);
-    }
-}
-
-@media (max-width: 576px) {
-    .movie-card {
-        width: calc(100% - 40px);
-    }
-}
+    color: #fff;
+  }
+  .play-button{
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    width: 80px;
+    border-radius: 8px;
+    background: rgb(44, 36, 36);
+  }
+  .download-button{
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    width: 80px;
+    border-radius: 8px;
+    background: rgb(44, 36, 36);
+  }
+  
